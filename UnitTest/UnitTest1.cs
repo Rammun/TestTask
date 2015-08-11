@@ -12,7 +12,7 @@ namespace UnitTest
         {
             RightTriangle rt = new RightTriangle(3, 4, 5);
             double area = rt.CalculateArea();
-            Assert.AreEqual(area, 6, "Площадь вычислена не правильно!");
+            Assert.AreEqual(area, 6);
         }
 
         [TestMethod]
