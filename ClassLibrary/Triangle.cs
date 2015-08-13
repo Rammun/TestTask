@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
     public class Triangle : Figure
     {
-        protected double a;
-        protected double b;
-        protected double c;
+        protected decimal a;
+        protected decimal b;
+        protected decimal c;
 
-        public Triangle(double a, double b, double c)
+        public Triangle(decimal a, decimal b, decimal c)
         {
             this.a = a;
             this.b = b;
@@ -21,10 +17,14 @@ namespace ClassLibrary
             if (!IsTriangle()) throw new InvalidTriangleExeption("Неверно заданы параметры треугольника!");
         }
 
+        public decimal A { get { return a; } }
+        public decimal B { get { return b; } }
+        public decimal C { get { return c; } }
+
         public override double CalculateArea()
         {
-            double p = (a + b + c) / 2;
-            return Math.Sqrt(p*(p-a)*(p-b)*(p-c));
+            decimal p = (a + b + c) / 2m;
+            return Math.Sqrt((double)(p * (p - a) * (p - b) * (p - c)));
         }
 
         protected bool IsTriangle()
