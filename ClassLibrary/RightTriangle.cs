@@ -21,31 +21,32 @@
         public RightTriangle(decimal a, decimal b, decimal c)
             : base(a, b, c)
         {
-            if (a * a + b * b == c * c)
+            // ---> Находим катеты из параметров и делаем, чтоб а и b были катетами
+            if (base.a * base.a + base.b * base.b == base.c * base.c)
                 return;
 
-            if (a * a + c * c == b * b)
+            if (base.a * base.a + base.c * base.c == base.b * base.b)
             {
-                decimal tmp = b;
-                b = c;
-                c = tmp;
+                decimal tmp = base.b;
+                base.b = base.c;
+                base.c = tmp;
                 return;
             }
 
-            if (b * b + c * c == a * a)
+            if (base.b * base.b + base.c * base.c == base.a * base.a)
             {
-                decimal tmp = a;
-                a = c;
-                c = tmp;
+                decimal tmp = base.a;
+                base.a = base.c;
+                base.c = tmp;
                 return;
             }
 
             throw new InvalidTriangleExeption("Параметры не прямоугольного треугольника!");
         }
 
-        public override double CalculateArea()
+        public override decimal CalculateArea()
         {
-            return (double)(0.5m * a * b);
+            return 0.5m * a * b;
         }
     }
 }

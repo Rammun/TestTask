@@ -21,10 +21,10 @@ namespace ClassLibrary
         public decimal B { get { return b; } }
         public decimal C { get { return c; } }
 
-        public override double CalculateArea()
+        public override decimal CalculateArea()
         {
             decimal p = (a + b + c) / 2m;
-            return Math.Sqrt((double)(p * (p - a) * (p - b) * (p - c)));
+            return (decimal)Math.Sqrt((double)(p * (p - a) * (p - b) * (p - c)));
         }
 
         protected bool IsTriangle()

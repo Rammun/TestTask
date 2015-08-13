@@ -11,18 +11,21 @@ namespace TestTask
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите параметры прямоугольного треугольника");
-            Console.Write("Катет1: ");
-            double a = double.Parse(Console.ReadLine());
-            Console.Write("Катет2: ");
-            double b = double.Parse(Console.ReadLine());
-            Console.Write("Гипотенуза: ");
-            double c = double.Parse(Console.ReadLine());
+            while(true)
+            {
+                Console.WriteLine("Введите параметры прямоугольного треугольника");
+                Console.Write("A: ");
+                decimal a = decimal.Parse(Console.ReadLine());
+                Console.Write("B: ");
+                decimal b = decimal.Parse(Console.ReadLine());
+                Console.Write("C: ");
+                decimal c = decimal.Parse(Console.ReadLine());
 
-            RightTriangle rt = new RightTriangle(a, b, c);
-            Console.WriteLine("Площадь треугольника равна: {0}", rt.CalculateArea());
+                RightTriangle rt = new RightTriangle(a, b, c);
+                Console.WriteLine("Площадь треугольника равна: {0}", rt.CalculateArea());
 
-            Console.ReadKey();
+                Console.ReadKey();
+            }
         }
     }
 }
