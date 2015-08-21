@@ -21,8 +21,10 @@ namespace TestTask
                 Console.Write("C: ");
                 decimal c = decimal.Parse(Console.ReadLine());
 
-                RightTriangle rt = new RightTriangle(a, b, c);
-                Console.WriteLine("Площадь треугольника равна: {0}", rt.CalculateArea());
+                //RightTriangle rt = new RightTriangle(a, b, c);
+                //Console.WriteLine("Площадь треугольника равна: {0}", rt.CalculateArea());
+
+                Console.WriteLine("Площадь треугольника равна: {0}", Area.AreaFigure.AreaRightTriangle(a, b, c));
 
                 Console.ReadKey();
             }

@@ -50,10 +50,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="UnitTestArea.cs" />
+    <Compile Include="UnitTestClassLibrary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Area\Area.csproj">
+      <Project>{cae6351b-cc14-42d1-b3be-4e9c82a66bc5}</Project>
+      <Name>Area</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
       <Project>{dde99bb8-1bb6-4861-860f-4eeef003c675}</Project>
       <Name>ClassLibrary</Name>

@@ -5,7 +5,7 @@ using ClassLibrary;
 namespace UnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestClassLibrary
     {
         [TestMethod]
         public void CalculateAreaRightTriangle()
