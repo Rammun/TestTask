@@ -5,4 +5,4 @@ decimal area = AreaFigure.AreaRightTriangle(a,b,c);
 
 **Второй вариант реализации:**
 RightTriangle rt = new RightTriangle(a, b, c);
-double area = rt.CalculateArea();
+decimal area = rt.CalculateArea();
