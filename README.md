@@ -4,4 +4,5 @@
 decimal area = AreaFigure.AreaRightTriangle(a,b,c);
 
 **Второй вариант реализации:**
-var figure =;
+RightTriangle rt = new RightTriangle(a, b, c);
+double area = rt.CalculateArea();
